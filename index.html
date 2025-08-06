@@ -18,7 +18,7 @@
 </div>
 
 <form class="centered-form">
-<div class="upload-avatar">Upload Avatar</div>
+<div class="upload-avatar">Upload Avatar</div>  <!-- Mettre un label à la place  -->
   
 <div class="avatar-upload">
     <input 
@@ -30,7 +30,7 @@
       hidden
       required
 >
-  <label for="avatar" class="avatar-label" id="avatar-label">
+  <label for="avatar" class="avatar-label" id="avatar-label"> <!-- Garder class ou id pour simplifier  -->
     <div id="avatar-file-error" class="error-message" style="display: none;">
       <img src="./assets/images/icon-info.svg"class="error-icon">
       Please upload a JPG or PNG image
@@ -63,7 +63,7 @@
 </div>
 <label for="github-username">GitHub Username</label>
 <input type="text" id="github-username" name="github-username" placeholder="@yourusername" required>
-<br>
+<br> <!-- inutile ici -->
 <button>Generate My Ticket</button>
 </form>
 
@@ -71,7 +71,7 @@
 
   <!-- Generated tickets starts -->
 
-  <div id="ticket-container">
+  <div id="ticket-container"> <!-- au lieu d'ajouter cacher la div, remplacer la div après submit -->
 
     <div class="ticket-congrats">
         <h1>Congrats, <span id="ticket-name"></span>!<br>Your ticket is ready.</h1>
@@ -95,5 +95,5 @@
   <img src="assets/images/pattern-squiggly-line-top.svg" alt="Décor courbes en haut à droite" class="top-right-decor">
 <img src="assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="Decorative Curved Lines" class="bottom-left-decor">
 <script src="script.js"></script>
-</body>
+</body> <!-- mieux gérer la hiérarchie des éléments -->
 </html>
