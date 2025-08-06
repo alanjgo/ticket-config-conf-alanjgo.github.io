@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Coding Conf</title>
+</head>
+<body>
+
+<img src="./assets/images/logo-full.svg" alt="Coding Conf Logo" class="logo">
+
+  <!-- Form starts -->
+<div class="intro" id="intro">
+  <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+  <p>Secure your spot at next year's biggest coding conference.</p>
+</div>
+
+<form class="centered-form">
+<div class="upload-avatar">Upload Avatar</div>
+  
+<div class="avatar-upload">
+    <input 
+      type="file" 
+      id="avatar" 
+      name="avatar" 
+      accept="image/png, image/jpeg"
+      class="avatar-input"
+      hidden
+      required
+>
+  <label for="avatar" class="avatar-label" id="avatar-label">
+    <div id="avatar-file-error" class="error-message" style="display: none;">
+      <img src="./assets/images/icon-info.svg"class="error-icon">
+      Please upload a JPG or PNG image
+    </div>
+    <div class="avatar-icon" id ="avatar-icon">
+        <img src="./assets/images/icon-upload.svg">
+    </div>
+    <img id="avatar-preview"/>
+    <div class="avatar-text">
+        Drag and drop or click to upload
+    </div>
+  </label>
+    <div id="avatar-size-error" class="error-message" style="display: none;">
+      <img src="./assets/images/icon-info.svg" alt="Info Icon" class="error-icon">
+      File too large. Please upload a photo under 500KB
+    </div>
+    <div class="avatar-info" id="avatar-info">
+      <img src="./assets/images/icon-info.svg">
+      <p>Upload your photo (JPG or PNG, max size: 500KB)</p>
+    </div>
+</div>
+ 
+<label for="full-name">Full Name</label>
+<input type="text" id="full-name" name="full-name" required>
+<label for="email-address">Email Address</label>
+<input type="email" id="email-address" name="email-address" placeholder="example@email.com" required>
+<div id="email-error" class="error-message" style="display: none;">
+  <img src="./assets/images/icon-info.svg" alt="Upload Icon" class="error-icon">
+    Please enter a valid email address
+</div>
+<label for="github-username">GitHub Username</label>
+<input type="text" id="github-username" name="github-username" placeholder="@yourusername" required>
+<br>
+<button>Generate My Ticket</button>
+</form>
+
+  <!-- Form ends -->
+
+  <!-- Generated tickets starts -->
+
+  <div id="ticket-container">
+
+    <div class="ticket-congrats">
+        <h1>Congrats, <span id="ticket-name"></span>!<br>Your ticket is ready.</h1>
+        <p>We've emailed your ticket to <span id="ticket-email"></span> and will send updates in the run up to the event.</p>
+    </div>
+    <div class ="ticket">
+      <img src="assets/images/pattern-ticket.svg" class="ticket-bg">
+      <img src="assets/images/logo-full.svg" class="ticket-logo">
+      <div class="ticket-date">Jan 31, 2025  /  Austin, TX</div>
+      <div class="ticket-holder" id="ticket-holder">Full Name</div>
+      
+      <div class="ticket-bottom-row">
+        <img id="ticket-avatar" class="ticket-avatar" src="">
+        <img src="assets/images/icon-github.svg" class="ticket-github-icon">
+        <div class="ticket-handle" id="ticket-handle">Github handle</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Generated tickets ends -->
+  <img src="assets/images/pattern-squiggly-line-top.svg" alt="Décor courbes en haut à droite" class="top-right-decor">
+<img src="assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="Decorative Curved Lines" class="bottom-left-decor">
+<script src="script.js"></script>
+</body>
+</html>

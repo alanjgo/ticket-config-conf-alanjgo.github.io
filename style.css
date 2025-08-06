@@ -1,0 +1,319 @@
+* {
+    font-family: 'Inconsolata', monospace;
+  }
+
+  .avatar-icon {
+    align-items: center;     
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .avatar-info {
+      display: flex;
+      margin-top: 2px;
+  }
+
+  .avatar-info img {
+    margin-top: 2px;
+    margin-right: 4px;   /* Espace entre l’icône et le texte */
+    width: 16px;         /* Ajuste la taille si besoin */
+    height: 16px;
+  }
+
+  .avatar-info p {
+    font-size: 0.8rem;
+    margin: 1px;
+  }
+
+.avatar-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #a084e8;        
+    background: rgba(255,255,255,0.08); 
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .avatar-label:hover, .avatar-label.dragover {
+    border-color: #fff;
+    background: rgba(160, 132, 232, 0.15);
+    border: solid 1px white;
+  }
+
+  #avatar-preview {
+    display: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 15%;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar-upload {
+    align-items: center;
+    justify-content: center;
+    border: #e0e0e0;
+    margin-top: 0;
+
+}
+
+  .avatar-text {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+body {
+    background-image: url('./assets/images/background-desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px; 
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem 0;
+    background: hsl(7, 71%, 60%);
+    color: rgba(30, 4, 77, 0.85);
+    font-size: 1.15rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 16px 0 rgba(255, 108, 58, 0.18), 0 1.5px 0 #fff3;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  }
+  
+  button:hover, button:focus {
+    box-shadow: 0 6px 24px 0 rgba(255, 108, 58, 0.28), 0 2px 0 #fff5;
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
+    border: solid 1px white;
+  }
+
+.centered-form {
+    max-width: 370px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+.centered-form label {
+    display: block;
+    text-align: left;
+    color: #cfc6f7;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+  
+.centered-form input {
+  border: 0.5px solid #ccc;
+  padding: 10px;
+  border-radius: 6px; 
+  background-color: transparent;
+  color: #fff;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.8rem;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  display: none;
+  text-align: left;
+}
+
+.error-icon {
+  filter: invert(19%) sepia(50%) saturate(7493%) hue-rotate(357deg) brightness(90%) contrast(110%);
+  width: 16px;
+  height: 16px;
+  margin-top: 0px;
+
+  vertical-align: middle;
+}
+
+form {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+#full-name:hover {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('./assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Inconsolata-Medium';
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .intro {
+    text-align: center;
+    align-items: center;      /* Centre horizontalement le contenu */
+    justify-content: center;
+    max-width: 600px;         /* Limite la largeur pour forcer le retour à la ligne */
+  }
+
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;  
+  }
+
+  p {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+span {
+  color:hsl(7, 88%, 67%);
+}
+
+  #ticket-container {
+    display: none;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;   
+  }
+
+  .ticket {
+    position: relative;
+  }
+  
+.ticket-avatar {
+  border-radius: 15%;
+  bottom: 40px;
+  left: 20px;
+  position: absolute; 
+  width: 64px;
+  height: 64px;
+  z-index: 4;
+}
+.ticket-bg {
+  display: block;
+}
+
+.ticket-bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* espace entre l’icône et le handle */
+  justify-content: center;
+}
+
+.ticket-github-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+.ticket-congrats {
+  text-align: center;
+  align-items: center;      
+  justify-content: center;
+  max-width: 400px; 
+  margin-bottom: 100px;
+}
+
+.ticket-date {
+  color: hsl(252, 6%, 83%);
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  z-index: 3;
+}
+
+.ticket-handle {
+  position: absolute;
+  color: #fff;
+  bottom: 50px;   
+  left: 100px;
+  z-index: 5; 
+}
+
+.ticket-holder {
+  position: absolute;
+  color: #fff;
+  bottom: 70px;
+  left: 100px;
+  z-index: 4; 
+}
+
+.ticket-logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;  
+  width: 256px;  
+  height: auto;
+  z-index: 2;   
+}
+
+#ticket-name {
+  background:-webkit-linear-gradient(left, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.upload-avatar {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.top-right-decor {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  width: 300px; /* Ajuste la taille selon le rendu souhaité */
+  height: auto;
+  z-index: 0; 
+  pointer-events: none;
+  user-select: none;
+}
+
+
+.bottom-left-decor {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 500px; /* Adjust size as needed */
+  height: auto;
+  z-index: 0; /* Behind main content */
+  pointer-events: none; /* So it doesn't block clicks */
+  user-select: none;
+}
